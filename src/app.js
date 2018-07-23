@@ -40,20 +40,13 @@ app.get('/payment', function(req, res) {
 
 // https://stackoverflow.com/questions/5710358/how-to-retrieve-post-query-parameters
 app.post('/transfer', function(req, res) {
-  //console.log(req.body.from);
-  //console.log(req.body.amount);
-
 
   let from_account_type = req.body.from;
   let amount = req.body.amount;
-  //console.log('from before: ' + accounts[from_account_type].balance);
   accounts[from_account_type].balance -= amount;
-  //console.log('from after: ' + accounts[from_account_type].balance);
 
   let to_account_type = req.body.to;
-  //console.log('to before: ' + accounts[to_account_type].balance);
   accounts[to_account_type].balance += parseInt(amount, 10);
-  //console.log('to after: ' + accounts[to_account_type].balance);
 
   let accountsJSON = JSON.stringify(accounts);
   fs.writeFileSync(
@@ -76,7 +69,6 @@ app.post('/payment', function(req, res) {
       accountsJSON,
       'utf8');
 
-  //console.log(accounts.credit);
   res.render('payment', { message: "Payment Successful", account: accounts.credit });
 
 });
