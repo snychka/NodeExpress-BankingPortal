@@ -9,6 +9,7 @@ describe('Create `index` view', () => {
       file = fs.readFileSync(path.join(process.cwd(), 'src/views/index.ejs'), 'utf8');
       ejs.compile(file);
     } catch (err) {
+      console.log(err);
       assert(err.code !== 'ENOENT', 'The `index.ejs` view file does not exist.');
       const errorMessage = err.message.substring(0, err.message.indexOf('compiling ejs'));
       assert(err.message.indexOf('compiling ejs') < -1, ` ${errorMessage}Error compiling index.ejs`);
