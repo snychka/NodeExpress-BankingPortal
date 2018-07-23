@@ -35,7 +35,7 @@ app.get('/transfer', function(req, res) {
   res.render('transfer');
 });
 app.get('/payment', function(req, res) {
-  res.render('payment');
+  res.render('payment', {account: accounts.credit});
 });
 
 // https://stackoverflow.com/questions/5710358/how-to-retrieve-post-query-parameters
