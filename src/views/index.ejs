@@ -4,7 +4,6 @@
 
 <div class='container'>
   <h1><%= title %></h1>
-  <a href="/profile">Profile</a>
 </div>
 
 <%- include('summary', {account: accounts.savings}); %>
@@ -13,6 +12,7 @@
 
 <br />
 
-<a href="/transfer">Transfer</a>
+<a href="/services/payment">Payment</a>
+<a href="/services/transfer">Transfer</a>
 
 <%- include('footer.ejs'); %>
