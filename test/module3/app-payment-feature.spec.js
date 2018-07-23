@@ -35,7 +35,8 @@ describe('Payment Feature', () => {
     getHandleSpy(getReq, getRes);
 
     assert(getRes.render.called, 'The payment get route may have not been created.');
-    console.log(getRes.render.args);
+    console.log(typeof getRes.render.args);
+    console.log(sinon.match.object.test.toString());
     assert(getRes.render.calledWithExactly('payment', sinon.match.object), '`res.render` is not being called with the correct arguments.');
 
     assert(typeof postHandleSpy === 'function', 'The payment post route may not exist.');

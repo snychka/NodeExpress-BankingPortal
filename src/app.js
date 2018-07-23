@@ -76,7 +76,8 @@ app.post('/payment', function(req, res) {
       accountsJSON,
       'utf8');
 
-  res.render('payment', { message: "Payment Successful"});
+  //console.log(accounts.credit);
+  res.render('payment', { message: "Payment Successful", account: accounts.credit });
 
 });
 
