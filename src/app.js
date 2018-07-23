@@ -73,6 +73,4 @@ app.post('/payment', function(req, res) {
 
 });
 
-app.listen(3000, function() {
-  console.log('Project Running on port 3000!');
-});
+app.listen(3000);
