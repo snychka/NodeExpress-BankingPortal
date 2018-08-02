@@ -21,7 +21,7 @@ describe('Read account data from `data.js`', () => {
     const accountsFound = R.allPass([R.has('savings'), R.has('checking'), R.has('credit')]);
     assert(
       accountsFound(accounts),
-      'The accounts variable does not contain the correct information. Check the accounts.json file.'
+      'The `accounts` variable does not contain the correct information. Check the `accounts.json` file.'
     );
   });
 });

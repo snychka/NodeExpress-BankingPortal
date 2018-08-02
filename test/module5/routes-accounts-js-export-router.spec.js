@@ -13,6 +13,6 @@ describe('`accounts.js` exports', () => {
       assert(false, 'The `src/routes/accounts.js` file does not exist or can not be required.');
     }
 
-    assert(localRouter !== undefined && typeof localRouter === 'function', '`src/routes/accounts.js` is not exporting the `router` function');
+    assert(localRouter !== undefined && typeof localRouter === 'function', '`src/routes/accounts.js` is not exporting the `router` function.');
   });
 });

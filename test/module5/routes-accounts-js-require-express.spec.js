@@ -14,8 +14,8 @@ describe('Require Express and Create Router - accounts', () => {
       router = accountsModule.__get__('router');
     } catch (err) {
       assert(express !== undefined, 'Has the `express` framework been required in `src/routes/accounts.js`?');
-      assert(router !== undefined, 'Has the `express` router been added to `src/routes/accounts.js`?');
+      assert(router !== undefined, 'Has the express `router` been added to `src/routes/accounts.js`?');
     }
-    assert(typeof router === 'function', 'Has the router const been set to the express router function?');
+    assert(typeof router === 'function', 'Has the `router` const been set to the express router function?');
   });
 });

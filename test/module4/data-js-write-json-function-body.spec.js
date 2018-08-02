@@ -18,15 +18,15 @@ describe('writeJSON function', () => {
       const dataModule = rewire('../../src/data');
       writeJSON = dataModule.__get__('writeJSON');
     } catch (err) {
-      assert(writeJSON !== undefined, '`data.js` does not contain a function called writeJSON.');
+      assert(writeJSON !== undefined, '`data.js` does not contain a function called `writeJSON`.');
     }
-    assert(typeof writeJSON === 'function', 'writeJSON is not a function.');
+    assert(typeof writeJSON === 'function', '`writeJSON` is not a function.');
 
     writeJSONSpy = sinon.spy(writeJSON);
     writeJSONSpy();
     assert(
       writeFileSyncStub.called,
-      '`writeFileSync` has not been called in your writeJSON function.'
+      '`writeFileSync` has not been called in your `writeJSON` function.'
     );
     assert(
       writeFileSyncStub.firstCall.args[0] === path.join(__dirname, '../../src/json/accounts.json'),

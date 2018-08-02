@@ -8,7 +8,7 @@ const sinonChai = require('sinon-chai');
 const { mockReq, mockRes } = require('sinon-express-mock');
 
 const temp_app = fs.readFileSync(path.join(process.cwd(), 'src/app.js'), 'utf8');
-const overwritten = temp_app.replace(/console.log\((.*)[^)]\)/, 'console.log()')
+const overwritten = temp_app.replace(/app\.listen\([\s\S]*\);?/g, 'app.listen(3000);')
 fs.writeFileSync(path.join(process.cwd(), 'src/temp_app.js'), overwritten , 'utf8')
 const appModule = rewire(path.join(process.cwd(), 'src/temp_app.js'));
 fs.unlinkSync(path.join(process.cwd(), 'src/temp_app.js'))

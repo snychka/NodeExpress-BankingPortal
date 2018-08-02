@@ -34,7 +34,7 @@ describe('Transfer post route to balance', () => {
     const req = mockReq(request);
     const res = mockRes();
 
-    assert(handleOriginal.toString().match(/parseInt/).length >= 1, 'Make sure to use parseInt.');
+    assert(handleOriginal.toString().match(/parseInt/).length >= 1, 'Make sure to use `parseInt`.');
 
     const currentBalance = accounts[request.body.to].balance;
     handleSpy(req, res);
@@ -42,7 +42,7 @@ describe('Transfer post route to balance', () => {
 
     assert(
       currentBalance + request.body.amount === newBalance,
-      'Your calculation for the new `to` account balance seem to be incorrect.'
+      'Your calculation for the new `to` account balance seems to be incorrect.'
     );
   });
 

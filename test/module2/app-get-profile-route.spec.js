@@ -24,7 +24,7 @@ describe('app.js contains a Profile Route', () => {
         );
         assert(
           R.propEq('name', 'PS User')(spy.firstCall.args[1].user),
-          'The profile route maybe missing a user object.'
+          'The profile route may be missing a user object.'
         );
       })
       .end(done);

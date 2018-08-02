@@ -37,7 +37,7 @@ describe('Transfer post route from balance', () => {
     handleSpy(req, res);
     const newBalance = accounts[request.body.from].balance;
 
-    assert(currentBalance - request.body.amount === newBalance, 'Your calculation for the new `from` account balance seem to be incorrect.');
+    assert(currentBalance - request.body.amount === newBalance, 'Your calculation for the new `from` account balance seems to be incorrect.');
   });
 
   after(() => {

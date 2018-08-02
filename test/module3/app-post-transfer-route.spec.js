@@ -17,7 +17,7 @@ describe('Transfer post route', () => {
     const res = mockRes();
     assert(typeof stub === 'function', 'The transfer post route may not exist.');
     stub(req, res);
-    assert(stub.called, 'The transfer post route may have not be created yet.');
+    assert(stub.called, 'The transfer post route may have not been created yet.');
   });
 
   after(() => {

@@ -30,7 +30,7 @@ describe('Checking and Credit Routes', () => {
     creditHandleSpy(req, res);
     assert(res.render.called, 'The credit get route is not calling res.render.');
     assert(res.render.firstCall.args[0] === 'account', 'The credit route does not seem to be rendering the `account` view.');
-    assert(typeof res.render.firstCall.args[1] === 'object', 'The credit route res.render maybe missing arguments');
+    assert(typeof res.render.firstCall.args[1] === 'object', 'The credit route res.render may be missing arguments.');
     assert(
       R.has('account')(res.render.firstCall.args[1]),
       'The credit route maybe missing an object with a account key value pair.'
@@ -40,10 +40,10 @@ describe('Checking and Credit Routes', () => {
     checkingHandleSpy(req, res);
     assert(res.render.called, 'The checking get route is not calling res.render.');
     assert(res.render.firstCall.args[0] === 'account', 'The index route does not seem to be rendering the `index` view.');
-    assert(typeof res.render.firstCall.args[1] === 'object', 'The checking route res.render maybe missing arguments');
+    assert(typeof res.render.firstCall.args[1] === 'object', 'The checking route res.render may be missing arguments.');
     assert(
       R.has('account')(res.render.firstCall.args[1]),
-      'The checking route maybe missing an object with a account key value pair.'
+      'The checking route may be missing an object with a account key value pair.'
     );
   });
 

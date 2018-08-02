@@ -44,12 +44,12 @@ describe('Update views', () => {
       assert(err.message.indexOf('compiling ejs') < -1, `${errorMessage} compiling index.ejs`);
     }
 
-    assert(typeof $index('a')['1'] !== 'undefined', 'The transfer link has not been updated');
-    assert($index('a')['1'].attribs.href === '/services/transfer', 'The `index.ejs` transfer link has not been updated');
-    assert($summary('a').attr('href') === '/account/<%= account.unique_name %>', 'The `index.ejs` transfer link has not been updated');
-    assert($transfer('#transferForm').attr('action') === '/services/transfer', 'The payment form action attribute has not been updated.');
-    assert($payment('#paymentForm').attr('action') === '/services/payment', 'The transfer form action attribute has not been updated.');
-    assert(typeof $index('a')['0'] !== 'undefined', 'The payment link has not been updated');
-    assert($index('a')['0'].attribs.href === '/services/payment', 'The `account.ejs` payment link has not been updated');
+    assert(typeof $index('a')['1'] !== 'undefined', 'The transfer link in `index.ejs` is missing.');
+    assert($index('a')['1'].attribs.href === '/services/transfer', 'The transfer link in `index.ejs` has not been updated.');
+    assert($summary('a').attr('href') === '/account/<%= account.unique_name %>', 'The account link in `summary.ejs` link has not been updated.');
+    assert($transfer('#transferForm').attr('action') === '/services/transfer', 'The transfer form action attribute has not been updated.');
+    assert($payment('#paymentForm').attr('action') === '/services/payment', 'The payment form action attribute has not been updated.');
+    assert(typeof $index('a')['0'] !== 'undefined', 'The payment link has not been updated.');
+    assert($account('a')['0'].attribs.href === '/services/payment', 'The payment link in `account.ejs` has not been updated.');
   });
 });

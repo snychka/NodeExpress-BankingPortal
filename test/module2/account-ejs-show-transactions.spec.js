@@ -15,7 +15,7 @@ describe('Account Transactions', () => {
     }
     assert(
       /<%-\s+include\(('|")transactions(\.ejs)?('|")\s*,\s*{\s*account:\s*account\s*}\s*\)(;)?\s*%>/.test(file),
-      'Have you included the `transactions` view in `account.ejs`.'
+      'Have you included the `transactions` view in `account.ejs`?'
     );
   });
 });

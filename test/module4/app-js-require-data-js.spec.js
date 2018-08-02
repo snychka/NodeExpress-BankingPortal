@@ -20,13 +20,13 @@ describe('Require `data.js` in `app.js', () => {
       accounts = appModule.__get__('accounts');
       writeJSON = appModule.__get__('writeJSON');
     } catch (err) {
-      assert(users !== undefined, '`app.js` is not requiring `src/data` and creating an `users` const');
-      assert(accounts !== undefined, '`app.js` is not requiring `src/data` and creating an `accounts` const');
-      assert(writeJSON !== undefined, '`app.js` is not requiring `src/data` and creating an `writeJSON` const');
+      assert(users !== undefined, '`app.js` is not requiring `src/data` and creating a `users` const.');
+      assert(accounts !== undefined, '`app.js` is not requiring `src/data` and creating an `accounts` const.');
+      assert(writeJSON !== undefined, '`app.js` is not requiring `src/data` and creating a `writeJSON` const.');
     }
 
-    assert(accounts !== undefined && typeof accounts === 'object', '`data.js` is not exporting the `accounts` object');
-    assert(users !== undefined && typeof users === 'object', '`data.js` is not exporting the `users` object');
-    assert(writeJSON !== undefined && typeof writeJSON === 'function', '`data.js` is not exporting the `writeJSON` function');
+    assert(accounts !== undefined && typeof accounts === 'object', '`data.js` is not exporting the `accounts` object.');
+    assert(users !== undefined && typeof users === 'object', '`data.js` is not exporting the `users` object.');
+    assert(writeJSON !== undefined && typeof writeJSON === 'function', '`data.js` is not exporting the `writeJSON` function.');
   });
 });

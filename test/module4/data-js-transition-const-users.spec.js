@@ -19,6 +19,6 @@ describe('Read user data from `data.js`', () => {
       'It is best if you specify an encoding like "utf8" when reading from a file (readFileSync function).'
     );
     const usersFound = R.allPass([R.has('name'), R.has('username'), R.has('phone'), R.has('email'), R.has('address')]);
-    assert(usersFound(users[0]), 'The users variable does not contain the correct information.');
+    assert(usersFound(users[0]), 'The `users` variable does not contain the correct information.');
   });
 });

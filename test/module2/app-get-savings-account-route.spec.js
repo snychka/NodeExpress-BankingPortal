@@ -27,10 +27,10 @@ describe('Savings Route', () => {
       res.render.firstCall.args[0] === 'account',
       'The savings route does not seem to be rendering the `account` view.'
     );
-    assert(typeof res.render.firstCall.args[1] === 'object', 'res.render maybe missing arguments');
+    assert(typeof res.render.firstCall.args[1] === 'object', 'res.render may be missing arguments');
     assert(
       R.has('account')(res.render.firstCall.args[1]),
-      'The savings route maybe missing an object with a account key value pair.'
+      'The savings route may be missing an object with an account key value pair.'
     );
   });
 

@@ -15,10 +15,10 @@ describe('Move account routes', () => {
       router = accountsModule.__get__('router');
     } catch (err) {
       assert(express !== undefined, 'Has the `express` framework been required in `src/routes/accounts.js`?');
-      assert(router !== undefined, 'Has the express router been added to `src/routes/accounts.js`?');
+      assert(router !== undefined, 'Has the express `router` been added to `src/routes/accounts.js`?');
     }
-    assert(typeof router === 'function', 'Has the router const been set to the express router function?');
-    assert(router.stack.length === 3, 'Were all three routes moved to accounts.js and added to the router');
+    assert(typeof router === 'function', 'Has the `router` const been set to the express router function?');
+    assert(router.stack.length === 3, 'Were all three routes moved to `accounts.js` and added to the router?');
 
     const getRoutes = [];
     router.stack.forEach(routes => {

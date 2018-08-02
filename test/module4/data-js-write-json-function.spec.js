@@ -10,8 +10,8 @@ describe('writeJSON function in data.js', () => {
       const dataModule = rewire('../../src/data');
       writeJSON = dataModule.__get__('writeJSON');
     } catch (err) {
-      assert(writeJSON !== undefined, '`data.js` does not contain a function called writeJSON.');
+      assert(writeJSON !== undefined, '`data.js` does not contain a function called `writeJSON`.');
     }
-    assert(typeof writeJSON === 'function', 'writeJSON is not a function.');
+    assert(typeof writeJSON === 'function', '`writeJSON` is not a function.');
   });
 });

@@ -18,8 +18,8 @@ describe('`data.js` exports', () => {
       assert(false, 'The `src/data.js` file does not exist.');
     }
 
-    assert(localAccounts !== undefined && typeof localAccounts === 'object', '`data.js` is not exporting the `accounts` object');
-    assert(localUsers !== undefined && typeof localUsers === 'object', '`data.js` is not exporting the `users` object');
-    assert(localWriteJSON !== undefined && typeof localWriteJSON === 'function', '`data.js` is not exporting the `writeJSON` function');
+    assert(localAccounts !== undefined && typeof localAccounts === 'object', '`data.js` is not exporting the `accounts` object.');
+    assert(localUsers !== undefined && typeof localUsers === 'object', '`data.js` is not exporting the `users` object.');
+    assert(localWriteJSON !== undefined && typeof localWriteJSON === 'function', '`data.js` is not exporting the `writeJSON` function.');
   });
 });

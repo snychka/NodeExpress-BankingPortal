@@ -18,7 +18,7 @@ describe('`services.js` exports', () => {
 
     assert(
       localRouter !== undefined && typeof localRouter === 'function',
-      '`src/routes/services.js` is not exporting the `router` function'
+      '`src/routes/services.js` is not exporting the `router` function.'
     );
   });
 });

@@ -55,11 +55,11 @@ describe('Payment Feature', () => {
     const newBalance = accounts.credit.balance;
 
     if (fs.existsSync(path.join(process.cwd(), 'src/data.js'))) {
-      assert(/writeJSON/.test(postHandleOriginal.toString()), 'The transfer post function does not include a call to writeJSON.');
+      assert(/writeJSON/.test(postHandleOriginal.toString()), 'The transfer post function does not include a call to `writeJSON`.');
     } else {
-      assert(/accountsJSON/.test(postHandleOriginal.toString()), 'The payment post function does not include a `accountsJSON` const.');
+      assert(/accountsJSON/.test(postHandleOriginal.toString()), 'The payment post function does not include an `accountsJSON` const.');
       assert(/JSON.stringify/.test(postHandleOriginal.toString()), 'The payment post function does not include a call to `JSON.stringify`.');
-      assert(postHandleOriginal.toString().match(/parseInt/).length >= 1, 'Make sure to use parseInt.');
+      assert(postHandleOriginal.toString().match(/parseInt/).length >= 1, 'Make sure to use `parseInt`.');
     }
 
     assert(postRes.render.called, 'The payment post route may have not been created.');
@@ -69,11 +69,11 @@ describe('Payment Feature', () => {
     );
     assert(
       balance - postRequest.body.amount === newBalance,
-      'Your calculation for the credit balance seem to be incorrect.'
+      'Your calculation for the credit balance seems to be incorrect.'
     );
     assert(
       available + postRequest.body.amount === newAvailable,
-      'Your calculation for the available balance seem to be incorrect.'
+      'Your calculation for the available balance seems to be incorrect.'
     );
     assert(
       writeFileSyncStub.firstCall.args[0] === path.join(__dirname, '../../src/json/accounts.json'),
@@ -85,7 +85,7 @@ describe('Payment Feature', () => {
     );
     assert(
       writeFileSyncStub.firstCall.args[2].replace('-', '').toLowerCase() === 'utf8',
-      'It is best if you encode the string as utf8'
+      'It is best if you encode the string as utf8.'
     );
   });
 

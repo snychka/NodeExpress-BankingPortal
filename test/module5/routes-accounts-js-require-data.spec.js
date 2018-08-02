@@ -11,7 +11,7 @@ describe('Require `data.js` - accounts', () => {
       const accountsModule = rewire('../../src/routes/accounts');
       accounts = accountsModule.__get__('accounts');
     } catch (err) {
-      assert(accounts !== undefined, 'Has the `data.js` been required and `accounts` const been created `src/routes/accounts.js`?');
+      assert(accounts !== undefined, 'Has `data.js` been required and the `accounts` const been created in `src/routes/accounts.js`?');
     }
     assert(typeof accounts === 'object', 'Is the `accounts` const an object?');
   });

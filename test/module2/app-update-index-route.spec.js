@@ -26,7 +26,7 @@ describe('Updated Index Route', () => {
         const accountsObjectFound = R.allPass([R.has('savings'), R.has('checking'), R.has('credit')]);
         assert(
           accountsObjectFound(spy.firstCall.args[1].accounts),
-          'The index route object maybe missing an `accounts: accounts"` key value pair.'
+          'The index route object may be missing an `accounts: accounts"` key value pair.'
         );
       })
       .end(done);
