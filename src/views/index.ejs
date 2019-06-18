@@ -1,0 +1,20 @@
+<%- include('header'); %>
+
+<!-- maybe don't need ejs? -->
+
+<div class='container'>
+  <h1><%= title %></h1>
+  <!-- following needed to pass part 1.  comment out for later parts -->
+  <!--<a href='/profile'>Profile</a>-->
+</div>
+
+<%- include('summary', {account: accounts.savings}); %>
+<%- include('summary', {account: accounts.checking}); %>
+<%- include('summary', {account: accounts.credit}); %>
+
+<br />
+
+<a href="/services/payment">Payment</a>
+<a href="/services/transfer">Transfer</a>
+
+<%- include('footer.ejs'); %>
