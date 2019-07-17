@@ -17,7 +17,6 @@ describe('Move services routes', () => {
       assert(express !== undefined, 'Has the `express` framework been required in `src/routes/services.js`?');
       assert(router !== undefined, 'Has the express `router` been added to `src/routes/services.js`?');
     }
-    //console.log('Router stack length: ' + router.stack.length);
     assert(typeof router === 'function', 'Has the `router` const been set to the express router function?');
     assert(router.stack.length === 4, 'Were all four routes moved to `services.js`?');
 
@@ -34,7 +33,7 @@ describe('Move services routes', () => {
         postRoutes.push(routes.route.path);
       }
     });
-    console.log("Routestack undefined? " + routeStack('/transfer', 'get') === undefined);
+
     assert(routeStack('/transfer', 'get') === undefined, 'The transfer get route has not been removed from `app.js`.');
     assert(routeStack('/transfer', 'post') === undefined, 'The transfer post route has not been removed from `app.js`.');
     assert(routeStack('/payment', 'get') === undefined, 'The payment get route has not been removed from `app.js`.');
