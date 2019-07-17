@@ -7,14 +7,24 @@
   <% } %>
   <span class="error"></span>
 
+<<<<<<< HEAD
+  <form id="transferForm" action="/services/transfer" method="post">
+    <span>Transfer From: </span> 
+    <select name="from" id="from" required>
+=======
   <form id="transferForm" action='/services/transfer' method='post'>
     <span>Transfer From: </span> 
     <select required name='from' id='from'>
+>>>>>>> module5-solution
       <option value="checking">Checking</option>
       <option value="savings">Savings</option>
     </select>
     <span> to: </span>
+<<<<<<< HEAD
+    <select name="to" id="to" required>
+=======
     <select required name='to' id='to'>
+>>>>>>> module5-solution
       <option value="checking">Checking</option>
       <option value="savings">Savings</option>
     </select>

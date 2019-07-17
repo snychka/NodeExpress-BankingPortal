@@ -1,17 +1,15 @@
-<%- include('header.ejs'); %>
+<%- include('header.ejs') %>
 
-<h1>Profile</h1>
+  <h1>Profile</h1>
 
-<div class='container'>
-  <p><%= user.name %></p>
-  <p><%= user.username%></p>
-  <p><%= user.phone%></p>
-  <p><%= user.email%></p>
-  <p><%= user.address%></p>
-</div>
+  <div>
+    <p><%= user.name %></p>
+    <p><%= user.username %></p>
+    <p><%= user.phone %></p>
+    <p><%= user.email %></p>
+    <p><%= user.address %></p>
+  </div>
 
-<br />
+  <br><a href='/'>Back to Account Summary</a>
 
-<a href="/">Back to Account Summary</a>
-
-<%- include('footer.ejs'); %>
+<%- include('footer.ejs') %>

@@ -1,6 +1,11 @@
 <%- include('header'); %>
+<<<<<<< HEAD
 <%- include('transactions', { account: account }) %>
+
+=======
+
   <%- include('transactions', { account: account }) %>
+>>>>>>> module5-solution
 
   <% if (account.unique_name == 'credit' && account.balance > 0) { %>
     <br><a href="/services/payment">Make a Payment</a>

@@ -1,0 +1,32 @@
+<%- include('header.ejs') %>
+<<<<<<< HEAD
+<form id="transferForm" action="/post" method="post">
+<h1>Profile</h1>
+</h1>
+<div>
+=======
+
+  <h1>Profile</h1>
+
+  <div>
+>>>>>>> module5-solution
+    <p><%= user.name %></p>
+    <p><%= user.username %></p>
+    <p><%= user.phone %></p>
+    <p><%= user.email %></p>
+    <p><%= user.address %></p>
+<<<<<<< HEAD
+</div>
+<br />
+<a href="/">Back to Account Summary</a>
+
+<%- include('footer.ejs') %>
+
+</form>
+=======
+  </div>
+
+  <br><a href='/'>Back to Account Summary</a>
+
+<%- include('footer.ejs') %>
+>>>>>>> module5-solution
